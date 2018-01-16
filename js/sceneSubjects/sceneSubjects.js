@@ -10,6 +10,7 @@ function SceneSubjects(scene) {
 
     sceneMeshes.sphere2.position.copy(scenePhysics.bodySphere2.position)
     sceneMeshes.sphere2.quaternion.copy(scenePhysics.bodySphere2.quaternion)
+    sceneLights.ballLight1.position.copy(scenePhysics.bodySphere2.position)
 
     sceneMeshes.sphere3.position.copy(scenePhysics.bodySphere3.position)
     sceneMeshes.sphere3.quaternion.copy(scenePhysics.bodySphere3.quaternion)

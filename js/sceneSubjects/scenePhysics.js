@@ -14,14 +14,14 @@ function ScenePhysics(scene) {
 
   const bodySphere = new CANNON.Body({
     mass: 5,
-    position: new CANNON.Vec3(0,4,0), 
+    position: new CANNON.Vec3(0,4,0.1), 
     shape: new CANNON.Sphere(0.5)
   })
   world.addBody(bodySphere);
 
   const bodySphere2 = new CANNON.Body({
     mass: 5,
-    position: new CANNON.Vec3(0,6,.1),
+    position: new CANNON.Vec3(0,6,0),
     shape: new CANNON.Sphere(0.5)
   })
   world.addBody(bodySphere2);
