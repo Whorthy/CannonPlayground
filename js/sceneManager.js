@@ -33,7 +33,8 @@ function SceneManager(canvas) {
     const nearPlane = 0.1;
     const farPlane = 1000;
     const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
-    camera.position.z = 5;
+    camera.position.z = 10;
+    camera.position.y = 3
 
     return camera;
   }
@@ -53,7 +54,7 @@ function SceneManager(canvas) {
   this.update = function() {
     renderer.render(scene, camera);
     controls.update();
-    //sceneSubjects.update();
+    sceneSubjects.update();
   }
 
   this.onWindowResize = function () {
