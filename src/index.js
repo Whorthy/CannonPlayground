@@ -1,3 +1,5 @@
+import THREE from "three";
+
 const canvas = document.getElementById('renderCanvas');
 
 const sceneManager = new SceneManager(canvas);
