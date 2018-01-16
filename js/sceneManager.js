@@ -5,6 +5,10 @@ function SceneManager(canvas) {
     height: canvas.height
   }
 
+  const stats = new Stats();
+  stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+  document.body.appendChild( stats.dom );
+
   const scene = buildScene();
   const renderer = buildRenderer(screenDimensions);
   const camera = buildCamera(screenDimensions);
@@ -20,10 +24,10 @@ function SceneManager(canvas) {
 
   function buildRenderer({width, height}) {
     const renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true, alpha: true});
-    const DPR = (window.devicePixelRatio) ? window.devicePixelRatio : 1;
+    const DPR =  1;
     renderer.setPixelRatio(DPR);
     renderer.setSize(width, height);
-    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.enabled = true; 
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     return renderer;
@@ -57,6 +61,8 @@ function SceneManager(canvas) {
     renderer.render(scene, camera);
     controls.update();
     sceneSubjects.update();
+    stats.begin();
+    stats.end();
   }
 
   this.onWindowResize = function () {
