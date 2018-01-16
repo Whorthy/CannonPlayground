@@ -2,7 +2,7 @@ function SceneMeshes(scene) {
 
   const pi = 3.1415
 
-  const groundGeometry = new THREE.PlaneGeometry(50, 50, 4);
+  const groundGeometry = new THREE.PlaneGeometry(200, 200, 4);
   const groundMaterial = new THREE.MeshPhongMaterial({color: 0xffffff, flatshading: true})
   const plane = new THREE.Mesh(groundGeometry, groundMaterial);
   plane.receiveShadow = true;
@@ -18,9 +18,10 @@ function SceneMeshes(scene) {
 
   const sphere2Material = new THREE.MeshBasicMaterial({color: 0xff0000})
   const sphere2 = new THREE.Mesh(sphereGeometry, sphere2Material);
-  
+  sphere2.castShadow = true;
   scene.add(sphere2)
 
+  const sphere3Material = new THREE.MeshBasicMaterial({color: 0x0000ff})
   const sphere3 = new THREE.Mesh(sphereGeometry, sphereMaterial);
   sphere3.castShadow = true;
   scene.add(sphere3)

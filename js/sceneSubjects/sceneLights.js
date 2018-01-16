@@ -8,14 +8,16 @@ function SceneLights(scene) {
   light1.position.y = 5;
   light1.position.x = 3; */
 
-  const ballLight1 = new THREE.PointLight(0xff0000, 1, 10);
-  ballLight1.castShadow = true;
-  scene.add(ballLight1);
+  const ballLight2 = new THREE.PointLight(0xff0000, 1, 10);
+  ballLight2.castShadow = true;
+  scene.add(ballLight2);
+
+  /* const ballLight3 = new THREE.PointLight(0x0000ff, 1, 10);
+  ballLight3.castShadow = true;
+  scene.add(ballLight3) */
 
   const lights = {
-
-    
-    ballLight1: ballLight1
+    ballLight2: ballLight2
   }
 
   return lights;
