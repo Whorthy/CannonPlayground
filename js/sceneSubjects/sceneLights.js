@@ -12,12 +12,18 @@ function SceneLights(scene) {
   ballLight2.castShadow = true;
   scene.add(ballLight2);
 
-  /* const ballLight3 = new THREE.PointLight(0x0000ff, 1, 10);
+  const ballLight3 = new THREE.PointLight(0xffaa00, 1, 10);
   ballLight3.castShadow = true;
-  scene.add(ballLight3) */
+  scene.add(ballLight3); 
+
+  const ballLight4 = new THREE.PointLight(0xff8800, 1, 10);
+  ballLight4.castShadow = true;
+  scene.add(ballLight4);
 
   const lights = {
-    ballLight2: ballLight2
+    ballLight2: ballLight2,
+    ballLight3: ballLight3,
+    ballLight4: ballLight4
   }
 
   return lights;

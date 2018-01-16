@@ -12,12 +12,12 @@ function ScenePhysics(scene) {
   world.addBody(bodyGround)
 
 
-  const bodySphere = new CANNON.Body({
+  /* const bodySphere = new CANNON.Body({
     mass: 5,
     position: new CANNON.Vec3(0,4,0.1), 
     shape: new CANNON.Sphere(0.5)
   })
-  world.addBody(bodySphere);
+  world.addBody(bodySphere); */
 
   const bodySphere2 = new CANNON.Body({
     mass: 5,
@@ -28,7 +28,7 @@ function ScenePhysics(scene) {
 
   const bodySphere3 = new CANNON.Body({
     mass: 5,
-    position: new CANNON.Vec3(0,2,-.1),
+    position: new CANNON.Vec3(0,4,-.1),
     shape: new CANNON.Sphere(0.5)
   })
   world.addBody(bodySphere3)
@@ -43,7 +43,7 @@ function ScenePhysics(scene) {
   const physics = {
     world: world,
     timeStep: timeStep,
-    bodySphere: bodySphere,
+    /* bodySphere: bodySphere, */
     bodySphere2: bodySphere2,
     bodySphere3: bodySphere3,
     bodySphere4: bodySphere4,
