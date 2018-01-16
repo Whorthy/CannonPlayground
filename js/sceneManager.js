@@ -24,7 +24,7 @@ function SceneManager(canvas) {
 
   function buildRenderer({width, height}) {
     const renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true, alpha: true});
-    const DPR =  1;
+    const DPR = /* (window.devicePixelRatio)? window.devicePixelRatio : */ 1;
     renderer.setPixelRatio(DPR);
     renderer.setSize(width, height);
     renderer.shadowMap.enabled = true; 

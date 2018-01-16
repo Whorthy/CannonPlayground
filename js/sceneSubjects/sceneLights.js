@@ -20,7 +20,7 @@ function SceneLights(scene) {
   ballLight4.castShadow = true;
   scene.add(ballLight4);
 
-  const ballLight5 = new THREE.PointLight(0xaaaaff, 1, 10);
+  const ballLight5 = new THREE.PointLight(0xaaaaff, 1, 5);
   ballLight5.castShadow = true;
   scene.add(ballLight5)
 
