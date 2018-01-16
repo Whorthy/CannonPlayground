@@ -20,10 +20,15 @@ function SceneLights(scene) {
   ballLight4.castShadow = true;
   scene.add(ballLight4);
 
+  const ballLight5 = new THREE.PointLight(0xaaaaff, 1, 10);
+  ballLight5.castShadow = true;
+  scene.add(ballLight5)
+
   const lights = {
     ballLight2: ballLight2,
     ballLight3: ballLight3,
-    ballLight4: ballLight4
+    ballLight4: ballLight4,
+    ballLight5: ballLight5
   }
 
   return lights;

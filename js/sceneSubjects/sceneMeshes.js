@@ -31,12 +31,19 @@ function SceneMeshes(scene) {
   sphere4.castShadow = true;
   scene.add(sphere4)
 
+  const sphere5Geometry = new THREE.SphereGeometry(0.1, 24, 24);
+  const sphere5Material = new THREE.MeshBasicMaterial({color:0xaaaaff})
+  const sphere5 = new THREE.Mesh(sphere5Geometry, sphere5Material);
+  sphere5.castShadow = true;
+  scene.add(sphere5)
+
   const meshes = {
     plane: plane,
     /* sphere: sphere, */
     sphere2: sphere2,
     sphere3: sphere3,
-    sphere4: sphere4
+    sphere4: sphere4,
+    sphere5: sphere5
   }
 
   return meshes;
