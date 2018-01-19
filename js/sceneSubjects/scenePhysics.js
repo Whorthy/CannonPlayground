@@ -2,7 +2,7 @@ function ScenePhysics(scene) {
 
   const world = new CANNON.World();
   const timeStep = 1/60
-  world.gravity.set(0, -9.81, 0);
+  world.gravity.set(0, -5, 0);
   world.broadphase = new CANNON.NaiveBroadphase();
 
   const bodyGround = new CANNON.Body({
