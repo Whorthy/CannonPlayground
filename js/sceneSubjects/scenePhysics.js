@@ -22,30 +22,41 @@ function ScenePhysics(scene) {
   const bodySphere2 = new CANNON.Body({
     mass: 5,
     position: new CANNON.Vec3(0,6,0),
-    shape: new CANNON.Sphere(0.5)
+    shape: new CANNON.Sphere(0.5),
+    linearDamping: 0.3,
+    angularDamping: 0.3
   })
   world.addBody(bodySphere2);
 
   const bodySphere3 = new CANNON.Body({
     mass: 5,
     position: new CANNON.Vec3(0,4,-.1),
-    shape: new CANNON.Sphere(0.5)
+    shape: new CANNON.Sphere(0.5),
+    linearDamping: 0.3,
+    angularDamping: 0.3
   })
   world.addBody(bodySphere3)
 
   const bodySphere4 = new CANNON.Body({
     mass: 5,
     position: new CANNON.Vec3(.1,8,0),
-    shape: new CANNON.Sphere(0.5)
+    shape: new CANNON.Sphere(0.5),
+    linearDamping: 0.3,
+    angularDamping: 0.3
   })
   world.addBody(bodySphere4)
 
   const bodySphere5 = new CANNON.Body({
     mass: 5,
-    position: new CANNON.Vec3(0,24,0),
-    shape: new CANNON.Sphere(0.1)
+    position: new CANNON.Vec3(0,24,0.4),
+    shape: new CANNON.Sphere(0.1),
+    linearDamping: 0.5,
+    angularDamping: 0.5
   })
   world.addBody(bodySphere5);
+
+  //bodySphere2.linearDamping = bodySphere2.angularDamping = 0.5
+
 
   const physics = {
     world: world,

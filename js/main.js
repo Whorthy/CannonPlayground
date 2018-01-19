@@ -21,6 +21,8 @@ function resizeCanvas() {
 }
 
 function render() {
+  
+
   requestAnimationFrame(render)
   sceneManager.update();
 }

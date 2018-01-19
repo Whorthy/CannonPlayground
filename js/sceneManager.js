@@ -1,5 +1,7 @@
 function SceneManager(canvas) {
 
+  let then = new Date().getTime() / 100
+
   const screenDimensions = {
     width: canvas.width,
     height: canvas.height
@@ -58,12 +60,27 @@ function SceneManager(canvas) {
   }
 
   this.update = function() {
+
+    let now = new Date().getTime() /100
+    let delta = now - then
+    let frameTime = 60 / 1000
+    
+    if (delta > frameTime) {
+      let frameNumber = delta / frameTime
+      for (var i = 1; i < frameNumber; i++) {
+        sceneSubjects.update();
+      } 
+    }
+  
     renderer.render(scene, camera);
     controls.update();
-    sceneSubjects.update();
     stats.begin();
     stats.end();
+
+    then = new Date().getTime() / 100
   }
+
+  
 
   this.onWindowResize = function () {
     const {width, height} = canvas;
